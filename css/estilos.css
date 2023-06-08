@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button.modify {
+  background-color: #ff9800;
+}
+
+button.modify:hover {
+  background-color: #e68a00;
+}
+
+button.delete {
+  background-color: #ff4c4c;
+}
+
+button.delete:hover {
+  background-color: #e64141;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  color: #fff;
+  background-color: #e64a19;
+}
+
+  
+nav {
+  background-color: #4267B2; /* Color azul de Facebook */
+  padding: 15px 0; /* Espaciado interno superior e inferior */
+  margin: 0;/* Eliminar margen exterior */
+}
+
+nav ul {
+  list-style-type: none; /* Eliminar viñetas de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Mostrar elementos en línea */
+}
+
+nav ul li {
+  margin-right: 10px; /* Espaciado derecho entre elementos */
+}
+
+nav ul li a {
+  text-decoration: none; /* Quitar subrayado de los enlaces */
+  color: #fff; /* Color de texto blanco */
+  padding: 8px 16px; /* Espaciado interno superior e inferior */
+  font-size: 14px; /* Tamaño de letra más pequeño */
+}
+
+nav ul li a:hover {
+  background-color: #29487D; /* Cambio de color al pasar el mouse */
+}
+
+a {
+    text-decoration: none;
+  }

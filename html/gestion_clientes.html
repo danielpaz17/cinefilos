@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html"><h1>Cinéfilos de Corazón</h1></a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../html/gestion_sucursales.html">Gestión de Sucursales</a></li>
+      <li><a href="../html/gestion_productoras.html">Gestión de Productoras</a></li>
+      <li><a href="../html/gestion_peliculas.html">Gestión de Películas</a></li>
+      <li><a href="../html/gestion_compra.html">Gestión de Compra</a></li>
+      <li><a href="../html/gestion_carteleras.html">Gestión de Carteleras</a></li>
+      <li><a href="../html/gestion_ventas.html">Gestión de Ventas de Tiquetes</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Registro de Clientes</h2>
+    <form onsubmit="return registrarse()">
+      <label for="nombres">Nombres:</label>
+      <input type="text" id="nombres">
+      
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos">
+      
+      <label for="cedula">Cédula:</label>
+      <input type="text" id="cedula">
+
+      <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="fechaNacimiento">
+
+      <label for="numeroCelular">Número de Celular:</label>
+      <input type="tel" id="numeroCelular">
+
+      <label for="correo">Correo:</label>
+      <input type="text" id="correo">
+
+      <label for="nuevaContraseña">Nueva Contraseña:</label>
+      <input type="password" id="nuevaContraseña">
+
+      <label for="cargo">Cargo:</label>
+      <select id="cargo">
+        <option value="administrador">Administrador</option>
+        <option value="cliente" selected>Cliente</option>
+      </select>
+     
+      <button type="submit">Registrar</button>
+      <button type="button" onclick="consultar()">Consultar</button>
+    </form>
+  </section>
+
+  <script>
+    function registrarse() {
+        var nombres = document.getElementById("nombres").value;
+        var apellidos = document.getElementById("apellidos").value;
+        var cedula = document.getElementById("cedula").value;
+        var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        var numeroCelular = document.getElementById("numeroCelular").value;
+        var correo = document.getElementById("correo").value;
+        var nuevaContraseña = document.getElementById("nuevaContraseña").value;
+        var cargo = document.getElementById("cargo").value;
+
+        if (nombres === "" || apellidos === "" || cedula === "" || fechaNacimiento === "" || numeroCelular === "" || correo === "" || nuevaContraseña === "") {
+            alert("Todos los campos son requeridos.");
+            return false;
+        }
+
+        var usuario = {
+            identificador: cedula,
+            nombreUsuario: nombres,
+            contraseña: nuevaContraseña,
+            cargo: cargo,
+            fechaCreacion: obtenerFechaHoraActual(),
+            fechaModificacion: obtenerFechaHoraActual()
+        };
+
+        // Guardar el objeto usuario en el almacenamiento local
+        localStorage.setItem('usuario', JSON.stringify(usuario));
+
+        alert("Registro exitoso. ¡Bienvenido!");
+
+        // Limpiar los campos del formulario
+        limpiarCampos();
+
+        return false; // Evita que se envíe el formulario
+    }
+
+    function consultar() {
+    var usuario = JSON.parse(localStorage.getItem('usuario'));
+
+    if (usuario) {
+        alert("Fecha de creación: " + usuario.fechaCreacion);
+        alert("Fecha de modificación: " + usuario.fechaModificacion);
+        limpiarCampos(); // Limpiar los campos del formulario después de consultar
+    } else {
+        alert("No se encontraron datos de registro.");
+    }
+}
+
+    function obtenerFechaHoraActual() {
+      var fecha = new Date();
+      var dia = fecha.getDate();
+      var mes = fecha.getMonth() + 1;
+      var año = fecha.getFullYear();
+      var hora = fecha.getHours();
+      var minutos = fecha.getMinutes();
+      var segundos = fecha.getSeconds();
+
+      return dia + "/" + mes + "/" + año + " " + hora + ":" + minutos + ":" + segundos;
+    }
+
+    function limpiarCampos() {
+        document.getElementById("nombres").value = "";
+        document.getElementById("apellidos").value = "";
+        document.getElementById("cedula").value = "";
+        document.getElementById("fechaNacimiento").value = "";
+        document.getElementById("numeroCelular").value = "";
+        document.getElementById("correo").value = "";
+        document.getElementById("nuevaContraseña").value = "";
+        document.getElementById("cargo").value = "cliente";
+    }
+  </script>
+
+</body>
+</html>
+

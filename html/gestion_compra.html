@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html"><h1>Cinéfilos de Corazón</h1></a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../html/gestion_sucursales.html">Gestión de Sucursales</a></li>
+      <li><a href="../html/gestion_productoras.html">Gestión de Productoras</a></li>
+      <li><a href="../html/gestion_peliculas.html">Gestión de Películas</a></li>
+      <li><a href="../html/gestion_compra.html">Gestión de Compra</a></li>
+      <li><a href="../html/gestion_carteleras.html">Gestión de Carteleras</a></li>
+      <li><a href="../html/gestion_ventas.html">Gestión de Ventas de Tiquetes</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Gestión de Compra</h2>
+    <form>
+      <label for="numero">Número:</label>
+      <input type="text" id="numero">
+
+      <label for="sucursal">Sucursal:</label>
+      <input type="text" id="sucursal">
+
+      <label for="peliculas">Películas:</label>
+      <input type="text" id="peliculas">
+
+      <label for="cantidades">Cantidades:</label>
+      <input type="text" id="cantidades">
+
+      <label for="precio">Precio:</label>
+      <input type="text" id="precio">
+
+      <label for="subtotal">Subtotal:</label>
+      <input type="text" id="subtotal" readonly>
+
+      <label for="total">Total:</label>
+      <input type="text" id="total" readonly>
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha"><br><br>
+
+      <button type="button" onclick="calcularTotal()">Calcular</button> <br>
+      <button type="button" onclick="guardarCompra()">Guardar</button>
+      <button id="btnConsultar" type="button" onclick="consultarCompra()">Consultar</button>
+      <button type="button" onclick="modificarCompra()">Modificar</button>
+      <button type="button" onclick="eliminarCompra()">Eliminar</button>
+    </form>
+  </section>
+  <script src="../js/gestion_compra.js"></script>
+</body>
+</html>
+

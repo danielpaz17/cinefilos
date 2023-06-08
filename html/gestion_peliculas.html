@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html"><h1>Cinéfilos de Corazón</h1></a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../html/gestion_sucursales.html">Gestión de Sucursales</a></li>
+      <li><a href="../html/gestion_productoras.html">Gestión de Productoras</a></li>
+      <li><a href="../html/gestion_peliculas.html">Gestión de Películas</a></li>
+      <li><a href="../html/gestion_compra.html">Gestión de Compra</a></li>
+      <li><a href="../html/gestion_carteleras.html">Gestión de Carteleras</a></li>
+      <li><a href="../html/gestion_ventas.html">Gestión de Ventas de Tiquetes</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h2>Gestión de Películas</h2>
+    <form>
+      <label for="codigo">Código:</label>
+      <input type="number" id="codigo">
+      
+      <label for="nombreOriginal">Nombre Original:</label>
+      <input type="text" id="nombreOriginal">
+      
+      <label for="nombreAsignado">Nombre asignado:</label>
+      <input type="text" id="nombreAsignado">
+      
+      <label for="genero">Género:</label>
+      <input type="text" id="genero">
+      
+      <label for="idiomaOriginal">Idioma original:</label>
+      <input type="text" id="idiomaOriginal">
+      
+      <label for="idiomasDisponibles">Idiomas disponibles:</label>
+      <input type="text" id="idiomasDisponibles">
+      
+      <label for="subtitulosDisponibles">Subtítulos disponibles:</label>
+      <input type="text" id="subtitulosDisponibles">
+      
+      <label for="duracion">Duración (HH:MM:SS):</label>
+      <input type="time" id="duracion">
+      
+      <label for="actoresPrincipales">Actores Principales:</label>
+      <input type="text" id="actoresPrincipales">
+      
+      <label for="actoresSecundarios">Actores Secundarios:</label>
+      <input type="text" id="actoresSecundarios">
+      
+      <label for="numAfiches">Número de afiches disponibles:</label>
+      <input type="number" id="numAfiches">
+      
+      <label for="numCopias">Número de copias:</label>
+      <input type="number" id="numCopias">
+      
+      <label for="productora">Productora:</label>
+      <input type="text" id="productora">
+
+      <button type="button" onclick="guardarPelicula()">Guardar</button>
+      <button type="button" onclick="buscarPelicula()">Buscar</button>
+      <button type="button" onclick="modificarPelicula()">Modificar</button>
+      <button type="button" onclick="eliminarPelicula()">Eliminar</button>
+    </form>
+  </section>
+  <script src="../js/gestion_peliculas.js"></script>
+</body>
+</html>

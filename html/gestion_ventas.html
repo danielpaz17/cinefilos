@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html"><h1>Cinéfilos de Corazón</h1></a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../html/gestion_sucursales.html">Gestión de Sucursales</a></li>
+      <li><a href="../html/gestion_productoras.html">Gestión de Productoras</a></li>
+      <li><a href="../html/gestion_peliculas.html">Gestión de Películas</a></li>
+      <li><a href="../html/gestion_compra.html">Gestión de Compra</a></li>
+      <li><a href="../html/gestion_carteleras.html">Gestión de Carteleras</a></li>
+      <li><a href="../html/gestion_ventas.html">Gestión de Ventas de Tiquetes</a></li>
+    </ul>
+  </nav>
+
+
+  <section>
+    <h2>Gestión de Ventas de Tiquetes</h2>
+    <form>
+      <label for="sala">Sala:</label>
+      <input type="number" id="sala">
+      
+      <label for="horario">Horario:</label>
+      <input type="time" id="horario">
+      
+      <label for="numerotiquetes">Numero de Tiquetes:</label>
+      <input type="number" id="numerotiquetes">
+      
+      <label for="posiciones">Posiciones:</label>
+      <input type="text" id="posiciones">
+      
+      <label for="formapago">Forma de Pago:</label>
+      <input type="text" id="formapago">
+      
+      <label for="cliente">Cliente:</label>
+      <input type="text" id="cliente">
+      
+      <label for="fechaventa">Fecha de Venta:</label>
+      <input type="date" id="fechaventa">
+
+      <label for="vendedor">Vendedor:</label>
+      <input type="text" id="vendedor"> 
+
+      <button type="button" onclick="guardarVenta()">Guardar</button>
+      <button type="button" onclick="buscarVenta()">Buscar</button>
+      <button type="button" onclick="modificarVenta()">Modificar</button>
+      <button type="button" onclick="eliminarVenta()">Eliminar</button>
+    </form>
+  </section>
+  <script src="../js/gestion_ventas.js"></script>
+</body>
+</html>
